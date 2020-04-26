@@ -1,0 +1,55 @@
+{
+  "name": "tomato-node",
+  "version": "0.0.0",
+  "private": true,
+  "description": "simple, modular utils for node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomato-js/tomato-node.git"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomato-js/tomato-node/issues"
+  },
+  "homepage": "https://github.com/tomato-js/tomato-node#readme",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "**/**/**/*.+(js|json|jsx|ts|tsx|mdx|md)": [
+      "prettier --write",
+      "git add "
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
+    "conventional-changelog-cli": "^2.0.31",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.3",
+    "jest": "^25.4.0",
+    "lerna": "^3.20.2",
+    "lint-staged": "^10.1.7",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  }
+}

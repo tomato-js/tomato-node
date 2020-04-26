@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "strict": true,
+    "declaration": true,
+    "target": "ESNext"
+  },
+  "exclude": ["node_modules"]
+}
