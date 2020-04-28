@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && run-p build:*",
+    "build:esm": "tsc -p tsconfig.json --target ESNext --module ESNext --outDir dist/esm",
+    "build:cjs": "tsc -p tsconfig.json --target ESNext --module commonjs --outDir dist/lib",
+    "clean": "rm -rf dist",
+    "test": "jest"
   },
   "license": "MIT"
 }

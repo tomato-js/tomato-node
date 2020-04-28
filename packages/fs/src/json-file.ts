@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @tomato-js/fs
+ * @module @tomato-node/fs
  */
 /**
  * 函数描述
@@ -9,7 +9,7 @@
  *
  * 脚本举例
  * ```
- *   import { jsonFile } from '@tomato-js/fs'
+ *   import { jsonFile } from '@tomato-node/fs'
  * ```
  */
 export function jsonFile() {
