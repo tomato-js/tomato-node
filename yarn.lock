@@ -1688,6 +1688,13 @@
   dependencies:
     globby "*"
 
+"@types/graceful-fs@^4.1.3":
+  version "4.1.3"
+  resolved "https://registry.npm.taobao.org/@types/graceful-fs/download/@types/graceful-fs-4.1.3.tgz?cache=0&sync_timestamp=1588200575865&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fgraceful-fs%2Fdownload%2F%40types%2Fgraceful-fs-4.1.3.tgz#039af35fe26bec35003e8d86d2ee9c586354348f"
+  integrity sha1-A5rzX+Jr7DUAPo2G0u6cWGNUNI8=
+  dependencies:
+    "@types/node" "*"
+
 "@types/handlebars@^4.1.0":
   version "4.1.0"
   resolved "https://registry.npm.taobao.org/@types/handlebars/download/@types/handlebars-4.1.0.tgz#3fcce9bf88f85fe73dc932240ab3fb682c624850"
@@ -1740,6 +1747,11 @@
   version "13.13.2"
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-13.13.2.tgz#160d82623610db590a64e8ca81784e11117e5a54"
   integrity sha1-Fg2CYjYQ21kKZOjKgXhOERF+WlQ=
+
+"@types/node@^13.13.4":
+  version "13.13.4"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-13.13.4.tgz#1581d6c16e3d4803eb079c87d4ac893ee7501c2c"
+  integrity sha1-FYHWwW49SAPrB5yH1KyJPudQHCw=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"

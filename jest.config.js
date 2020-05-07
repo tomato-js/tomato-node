@@ -5,4 +5,8 @@ module.exports = {
   preset: "ts-jest",
   testMatch: ["**/packages/**/*.test.[jt]s?(x)"],
   coveragePathIgnorePatterns: ["/node_modules/", "/dist/"],
+  // transform: {
+  //   '^.+\\.ts?$': 'ts-jest',
+  // },
+  // testEnvironment: 'node'
 };
