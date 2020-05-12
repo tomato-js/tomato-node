@@ -1,1 +1,2 @@
-export { jsonFile } from "./json-file";
+export { readJson, readJsonSync } from "./read-json";
+export { writeJson, writeJsonSync } from "./write-json";
