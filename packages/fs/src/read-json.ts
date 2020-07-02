@@ -46,7 +46,7 @@ export async function readJson(fileName: string): Promise<object> {
  * 脚本举例
  * ```
  *   import { readJsonSync } from '@tomato-node/fs'
- *   const resultSync = readJsonSync('b.json);
+ *   const resultSync = readJsonSync('b.json');
  * ```
  */
 export function readJsonSync(fileName: string): object {
