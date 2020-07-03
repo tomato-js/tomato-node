@@ -12,5 +12,8 @@
     "clean": "rm -rf dist",
     "test": "jest"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

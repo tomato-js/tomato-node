@@ -13,6 +13,9 @@
     "test": "jest"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "table": "^5.4.6"
   }
