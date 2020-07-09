@@ -17,6 +17,8 @@
     "access": "public"
   },
   "dependencies": {
+    "bunyan": "^1.8.14",
+    "chalk": "^4.1.0",
     "table": "^5.4.6"
   }
 }
