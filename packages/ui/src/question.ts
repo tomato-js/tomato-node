@@ -3,23 +3,22 @@
  * @module @tomato-node/ui
  */
 import * as inquirer from "inquirer";
+inquirer.registerPrompt("search-list", require("inquirer-search-list"));
 
 type CommonInputParams = {
   name: string;
   message: string;
-  type: "input" | "number" | "password" | "checkbox" | "list" | "confirm";
+  type: "input" | "number" | "password" | "checkbox" | "list" | "confirm" | "search-list";
   choices?: string[];
-  source?: any;
 };
 
-const commonInput = async ({ name, message, type, choices, source }: CommonInputParams): Promise<any> => {
+const commonInput = async ({ name, message, type, choices }: CommonInputParams): Promise<any> => {
   const questions = [
     {
       type,
       name,
       message,
       choices,
-      source,
     },
   ];
   const prompt = inquirer.createPromptModule();
@@ -147,3 +146,27 @@ export const confirm = (name: string) => async (message: string) =>
     message,
     type: "confirm",
   });
+
+/**
+ * 搜索自动完成选择器
+ *
+ * 新增于v0.0.5
+ *
+ * 脚本举例
+ * ```
+ *   import { autocomplete } from '@tomato-node/ui'
+ *   autocomplete("autocomplete")("Which one?")(['111','222','333']).then(data=>console.log(data));
+ *   //? Which one?  222
+ *   // { autocomplete: '222}
+ * ```
+ */
+export const autocomplete = (name: string) => (message: string) => async (choices: string[]) => {
+  return await inquirer.prompt([
+    {
+      type: "search-list",
+      message,
+      name,
+      choices,
+    },
+  ]);
+};

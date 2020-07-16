@@ -3,7 +3,7 @@
  * @module @tomato-node/ui
  */
 import * as bunyan from "bunyan";
-import chalk from "chalk";
+import * as chalk from "chalk";
 import { Writable } from "stream";
 
 interface IObject {
