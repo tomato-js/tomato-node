@@ -9,6 +9,7 @@ describe("ui util", () => {
       expect(typeof ui.checkbox).toBe("function");
       expect(typeof ui.radio).toBe("function");
       expect(typeof ui.confirm).toBe("function");
+      expect(typeof ui.autocomplete).toBe("function");
     });
   });
 });
