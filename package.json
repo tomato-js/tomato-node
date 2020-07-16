@@ -1,6 +1,6 @@
 {
   "name": "tomato-node",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "workspaces": [
     "packages/*"
   ],

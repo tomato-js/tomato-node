@@ -71,7 +71,21 @@
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_tomato_node_ui.html#logger" class="tsd-kind-icon">logger</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_tomato_node_ui.html#tablecontent" class="tsd-kind-icon">table<wbr>Content</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_ui.html#autocomplete" class="tsd-kind-icon">autocomplete</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_ui.html#checkbox" class="tsd-kind-icon">checkbox</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_ui.html#confirm" class="tsd-kind-icon">confirm</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_ui.html#createlogger" class="tsd-kind-icon">create<wbr>Logger</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_ui.html#input" class="tsd-kind-icon">input</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_ui.html#numberinput" class="tsd-kind-icon">number<wbr>Input</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_ui.html#passwordinput" class="tsd-kind-icon">password<wbr>Input</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_ui.html#radio" class="tsd-kind-icon">radio</a></li>
 							</ul>
 						</section>
 					</div>
@@ -80,12 +94,38 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="logger" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> logger</h3>
+					<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Logger</span><span class="tsd-signature-symbol"> = createLogger({ name: &quot;LOGGER&quot; })</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/logger.ts#L116">ui/src/logger.ts:116</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>简易Log</p>
+						</div>
+						<p>新增于v0.0.3</p>
+						<p>脚本举例</p>
+						<pre><code>  import { logger } from <span class="hljs-string">&#x27;@tomato-node/ui&#x27;</span>
+  <span class="hljs-regexp">//</span>绿色LOGGER INFO hello
+  logger.info(<span class="hljs-string">&#x27;hello&#x27;</span>)
+  <span class="hljs-regexp">//</span>黄色LOGGER WARN hello
+  logger.warn(<span class="hljs-string">&#x27;hello&#x27;</span>)
+  <span class="hljs-regexp">//</span>红色LOGGER ERROR hello
+  logger.error(<span class="hljs-string">&#x27;hello&#x27;</span>)
+  <span class="hljs-regexp">//</span>红色LOGGER FATAL hello
+  logger.fatal(<span class="hljs-string">&#x27;hello&#x27;</span>)</code></pre>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
 					<a name="tablecontent" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> table<wbr>Content</h3>
 					<div class="tsd-signature tsd-kind-icon">table<wbr>Content<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">table</span><span class="tsd-signature-symbol"> = table</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/c14ea05/packages/ui/src/table.ts#L36">ui/src/table.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/table.ts#L36">ui/src/table.ts:36</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -121,6 +161,292 @@
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="autocomplete" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> autocomplete</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">autocomplete<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/question.ts#L163">ui/src/question.ts:163</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>搜索自动完成选择器</p>
+								</div>
+								<p>新增于v0.0.5</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { autocomplete } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/ui&#x27;</span>
+  autocomplete(<span class="hljs-string">&quot;autocomplete&quot;</span>)(<span class="hljs-string">&quot;Which one?&quot;</span>)([<span class="hljs-string">&#x27;111&#x27;</span>,<span class="hljs-string">&#x27;222&#x27;</span>,<span class="hljs-string">&#x27;333&#x27;</span>]).then(<span class="hljs-function"><span class="hljs-params">data</span>=&gt;</span><span class="hljs-built_in">console</span>.log(data));
+  <span class="hljs-comment">//? Which one?  222</span>
+  <span class="hljs-comment">// { autocomplete: &#x27;222}</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="checkbox" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> checkbox</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">checkbox<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/question.ts#L101">ui/src/question.ts:101</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>多选框</p>
+								</div>
+								<p>新增于v0.0.5</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { checkbox } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/ui&#x27;</span>
+  checkbox(<span class="hljs-string">&quot;checkList&quot;</span>)(<span class="hljs-string">&quot;Who are your friend?&quot;</span>)([<span class="hljs-string">&#x27;brizer&#x27;</span>,<span class="hljs-string">&#x27;seven&#x27;</span>]).then(<span class="hljs-function"><span class="hljs-params">data</span>=&gt;</span><span class="hljs-built_in">console</span>.log(data));
+  <span class="hljs-comment">//? Who are your friend?  [&#x27;brizer&#x27;,&#x27;seven&#x27;]</span>
+  <span class="hljs-comment">// { checkList: [&#x27;brizer&#x27;,&#x27;seven&#x27;]}</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="confirm" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> confirm</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">confirm<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/question.ts#L143">ui/src/question.ts:143</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>确认</p>
+								</div>
+								<p>新增于v0.0.5</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { confirm } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/ui&#x27;</span>
+  confirm(<span class="hljs-string">&quot;confirm&quot;</span>)(<span class="hljs-string">&quot;Are you sure?&quot;</span>).then(<span class="hljs-function"><span class="hljs-params">data</span>=&gt;</span><span class="hljs-built_in">console</span>.log(data));
+  <span class="hljs-comment">//? Are you sure?  Y</span>
+  <span class="hljs-comment">// { confirm: true}</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="createlogger" class="tsd-anchor"></a>
+					<h3>create<wbr>Logger</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Logger<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Logger</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/logger.ts#L85">ui/src/logger.ts:85</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>logger生成器</p>
+								</div>
+								<p>新增于v0.0.3</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { createLogger } from <span class="hljs-string">&#x27;@tomato-node/ui&#x27;</span>
+  <span class="hljs-keyword">const</span> <span class="hljs-built_in">log</span> = createLogger({name:<span class="hljs-string">&#x27;mocker&#x27;</span>});
+  <span class="hljs-comment">//绿色mocker INFO hello</span>
+  <span class="hljs-built_in">log</span>.info(<span class="hljs-string">&#x27;hello&#x27;</span>)
+  <span class="hljs-comment">//黄色mocker WARN hello</span>
+  <span class="hljs-built_in">log</span>.warn(<span class="hljs-string">&#x27;hello&#x27;</span>)
+  <span class="hljs-comment">//红色mocker ERROR hello</span>
+  <span class="hljs-built_in">log</span>.error(<span class="hljs-string">&#x27;hello&#x27;</span>)
+  <span class="hljs-comment">//红色mocker FATAL hello</span>
+  <span class="hljs-built_in">log</span>.fatal(<span class="hljs-string">&#x27;hello&#x27;</span>)</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Logger</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="input" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> input</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">input<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/question.ts#L41">ui/src/question.ts:41</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>字符串输入框</p>
+								</div>
+								<p>新增于v0.0.5</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { <span class="hljs-keyword">input</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/ui&#x27;</span>
+  <span class="hljs-keyword">input</span>(&quot;name&quot;)(&quot;What is your name?&quot;).<span class="hljs-keyword">then</span>(data=&gt;console.log(data));
+  //? What <span class="hljs-keyword">is</span> your <span class="hljs-type">name</span>?   brizer
+  // { <span class="hljs-type">name</span>: <span class="hljs-string">&#x27;brizer&#x27;</span>}</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="numberinput" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> number<wbr>Input</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">number<wbr>Input<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/question.ts#L61">ui/src/question.ts:61</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>数字输入框</p>
+								</div>
+								<p>新增于v0.0.5</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { numberInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/ui&#x27;</span>
+  numberInput(<span class="hljs-string">&quot;age&quot;</span>)(<span class="hljs-string">&quot;How old are you?&quot;</span>).then(<span class="hljs-function"><span class="hljs-params">data</span>=&gt;</span><span class="hljs-built_in">console</span>.log(data));
+  <span class="hljs-comment">//? How old are you?   28</span>
+  <span class="hljs-comment">// { age: 28}</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="passwordinput" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> password<wbr>Input</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">password<wbr>Input<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/question.ts#L81">ui/src/question.ts:81</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>密码输入框</p>
+								</div>
+								<p>新增于v0.0.5</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { passwordInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/ui&#x27;</span>
+  passwordInput(&quot;password&quot;)(&quot;What is your password?&quot;).<span class="hljs-keyword">then</span>(data=&gt;console.log(data));
+  //? What <span class="hljs-keyword">is</span> your <span class="hljs-keyword">password</span>? [<span class="hljs-keyword">input</span> <span class="hljs-keyword">is</span> hidden]  <span class="hljs-number">123456</span>
+  // { <span class="hljs-keyword">password</span>: <span class="hljs-string">&#x27;123456&#x27;</span>}</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="radio" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> radio</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">radio<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/ui/src/question.ts#L122">ui/src/question.ts:122</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>单选框</p>
+								</div>
+								<p>新增于v0.0.5</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { radio } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/ui&#x27;</span>
+  radio(<span class="hljs-string">&quot;radio&quot;</span>)(<span class="hljs-string">&quot;Who is your friend?&quot;</span>)([<span class="hljs-string">&#x27;brizer&#x27;</span>,<span class="hljs-string">&#x27;seven&#x27;</span>]).then(<span class="hljs-function"><span class="hljs-params">data</span>=&gt;</span><span class="hljs-built_in">console</span>.log(data));
+  <span class="hljs-comment">//? Who are your friend?  brizer</span>
+  <span class="hljs-comment">// { radio: &#x27;brizer}</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -139,7 +465,34 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_tomato_node_ui.html#logger" class="tsd-kind-icon">logger</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="_tomato_node_ui.html#tablecontent" class="tsd-kind-icon">table<wbr>Content</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_ui.html#autocomplete" class="tsd-kind-icon">autocomplete</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_ui.html#checkbox" class="tsd-kind-icon">checkbox</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_ui.html#confirm" class="tsd-kind-icon">confirm</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_ui.html#createlogger" class="tsd-kind-icon">create<wbr>Logger</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_ui.html#input" class="tsd-kind-icon">input</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_ui.html#numberinput" class="tsd-kind-icon">number<wbr>Input</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_ui.html#passwordinput" class="tsd-kind-icon">password<wbr>Input</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_ui.html#radio" class="tsd-kind-icon">radio</a>
 					</li>
 				</ul>
 			</nav>
