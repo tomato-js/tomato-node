@@ -3,8 +3,8 @@
  * @module @tomato-node/fs
  */
 
- import { readFile, readFileSync } from "graceful-fs";
- import { promisify } from "util"
+import { readFile, readFileSync } from "fs";
+import { promisify } from "util";
 /**
  * 函数描述
  *
@@ -17,25 +17,17 @@
  * ```
  */
 export async function readJson(fileName: string): Promise<object> {
-
-  // const content =  await promisify(readFile)(fileName, {
-  //   encoding: 'utf8',
-  //   flag: 'r+'
-  // })
-  // return new Promise((resolve, reject)=> {
-  //   // JSON.parse(content)
-  //   resolve(JSON.parse(content))
-  // })
-    return await promisify(readFile)(fileName, {
-      encoding: 'utf8',
-      flag: 'r+'
-    }).then((data)=> {
-      return JSON.parse(data)
-    }).catch((err)=>{
-      err.message = `${fileName}: ${err.message}`
-      throw err
+  return await promisify(readFile)(fileName, {
+    encoding: "utf8",
+    flag: "r+",
+  })
+    .then((data) => {
+      return JSON.parse(data);
     })
-
+    .catch((err) => {
+      err.message = `${fileName}: ${err.message}`;
+      throw err;
+    });
 }
 
 /**
@@ -50,14 +42,14 @@ export async function readJson(fileName: string): Promise<object> {
  * ```
  */
 export function readJsonSync(fileName: string): object {
-  try{
+  try {
     const content = readFileSync(fileName, {
-      encoding: 'utf8',
-      flag: 'r+'
-    })
-    return JSON.parse(content)
-  } catch(err) {
-    err.message = `${fileName}: ${err.message}`
-    throw err
+      encoding: "utf8",
+      flag: "r+",
+    });
+    return JSON.parse(content);
+  } catch (err) {
+    err.message = `${fileName}: ${err.message}`;
+    throw err;
   }
 }
