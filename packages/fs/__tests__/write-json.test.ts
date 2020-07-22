@@ -1,15 +1,26 @@
 import * as fs from "../src";
+import * as mockFs from "mock-fs";
 import { readFileSync } from "fs";
-import { resolve } from "path";
+import { join } from "path";
+
+const obj = {
+  firstName: "aaa",
+  lastName: "bbb",
+};
+const baseDir = join(process.cwd(), "write", "to", "dir");
 
 describe("fs util", () => {
   describe("writeJson", () => {
+    beforeAll(() => {
+      mockFs({
+        [baseDir]: {},
+      });
+    });
+    afterAll(() => {
+      mockFs.restore();
+    });
     test("writeJson()", async () => {
-      const obj = {
-        firstName: "aaa",
-        lastName: "bbb",
-      };
-      const file = resolve(__dirname, "mock", "write.json");
+      const file = join(baseDir, "write.json");
       await fs.writeJson(file, obj);
       const result = readFileSync(file, {
         encoding: "utf8",
@@ -18,11 +29,7 @@ describe("fs util", () => {
     });
 
     test("writeJsonSync()", () => {
-      const obj = {
-        firstName: "ccc",
-        lastName: "ddd",
-      };
-      const file = resolve(__dirname, "mock", "write.json");
+      const file = join(baseDir, "writeSync.json");
       fs.writeJsonSync(file, obj);
       const result = readFileSync(file, {
         encoding: "utf8",
