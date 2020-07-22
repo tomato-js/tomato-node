@@ -71,8 +71,10 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#ismoduleexist" class="tsd-kind-icon">is<wbr>Module<wbr>Exist</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#readjson" class="tsd-kind-icon">read<wbr>Json</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#readjsonsync" class="tsd-kind-icon">read<wbr>Json<wbr>Sync</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#requiremodule" class="tsd-kind-icon">require<wbr>Module</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#writejson" class="tsd-kind-icon">write<wbr>Json</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#writejsonsync" class="tsd-kind-icon">write<wbr>Json<wbr>Sync</a></li>
 							</ul>
@@ -83,6 +85,39 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="ismoduleexist" class="tsd-anchor"></a>
+					<h3>is<wbr>Module<wbr>Exist</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Module<wbr>Exist<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/fs/src/require-module.ts#L40">fs/src/require-module.ts:40</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>判断一个模块是否可以被加载</p>
+								</div>
+								<p>新增于v0.0.5</p>
+								<p>脚本举例</p>
+								<pre><code>  import { isModuleExist } from <span class="hljs-string">&#x27;@tomato-node/fs&#x27;</span>
+  isModuleExist(<span class="hljs-string">&#x27;fs&#x27;</span>);<span class="hljs-regexp">//</span>true
+  isModuleExist(<span class="hljs-string">&#x27;fs2&#x27;</span>);<span class="hljs-regexp">//</span>false</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="readjson" class="tsd-anchor"></a>
 					<h3>read<wbr>Json</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -92,7 +127,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/c14ea05/packages/fs/src/read-json.ts#L19">fs/src/read-json.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/fs/src/read-json.ts#L19">fs/src/read-json.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -124,7 +159,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/c14ea05/packages/fs/src/read-json.ts#L52">fs/src/read-json.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/fs/src/read-json.ts#L52">fs/src/read-json.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -147,6 +182,38 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="requiremodule" class="tsd-anchor"></a>
+					<h3>require<wbr>Module</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">require<wbr>Module<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/fs/src/require-module.ts#L18">fs/src/require-module.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>安全的加载模块，并确保其只被加载一次</p>
+								</div>
+								<p>新增于v0.0.5</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { requireModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/fs&#x27;</span>
+  <span class="hljs-keyword">const</span> fs = requireModule(<span class="hljs-string">&#x27;fs&#x27;</span>);</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="writejson" class="tsd-anchor"></a>
 					<h3>write<wbr>Json</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -156,7 +223,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/c14ea05/packages/fs/src/write-json.ts#L20">fs/src/write-json.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/fs/src/write-json.ts#L20">fs/src/write-json.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -192,7 +259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/c14ea05/packages/fs/src/write-json.ts#L39">fs/src/write-json.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/a027ec8/packages/fs/src/write-json.ts#L39">fs/src/write-json.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,10 +304,16 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_fs.html#ismoduleexist" class="tsd-kind-icon">is<wbr>Module<wbr>Exist</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_tomato_node_fs.html#readjson" class="tsd-kind-icon">read<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_tomato_node_fs.html#readjsonsync" class="tsd-kind-icon">read<wbr>Json<wbr>Sync</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_fs.html#requiremodule" class="tsd-kind-icon">require<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_tomato_node_fs.html#writejson" class="tsd-kind-icon">write<wbr>Json</a>
