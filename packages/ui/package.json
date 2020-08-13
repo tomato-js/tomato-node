@@ -17,10 +17,12 @@
     "access": "public"
   },
   "dependencies": {
+    "@tomato-js/shared": "0.0.21",
     "bunyan": "^1.8.14",
     "chalk": "^4.1.0",
     "inquirer": "^7.3.1",
     "inquirer-search-list": "^1.2.6",
+    "ora": "^5.0.0",
     "table": "^5.4.6"
   }
 }
