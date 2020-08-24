@@ -1,3 +1,14 @@
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/tomato-js/tomato-node/compare/v0.0.5...v0.0.6) (2020-08-24)
+
+
+### Features
+
+* **fs:** change fs test ([112ba98](https://github.com/tomato-js/tomato-node/commit/112ba98))
+* **ui:** add loading component ([41db58a](https://github.com/tomato-js/tomato-node/commit/41db58a))
+
+
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/tomato-js/tomato-node/compare/v0.0.4...v0.0.5) (2020-07-16)
 
