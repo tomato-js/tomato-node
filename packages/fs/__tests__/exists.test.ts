@@ -38,29 +38,29 @@ describe("fs util", () => {
       expect(isExists).toBe(false);
     });
     test("callback path exists() true", (done) => {
-      function callback(data: boolean) {
-        expect(data).toBe(true);
+      function callback(data:Error|null) {
+        expect(data).toBe(null);
         done();
       }
       fs.exists(join(process.cwd(), "read"), callback);
     });
     test("callback path exists() false", (done) => {
-      function callback(data: boolean) {
-        expect(data).toBe(false);
+      function callback(data:Error|null) {
+        expect(data instanceof Error).toBe(true);
         done();
       }
       fs.exists(join(process.cwd(), "notExist"), callback);
     });
     test("callback file exists() true", (done) => {
-      function callback(data: boolean) {
-        expect(data).toBe(true);
+      function callback(data:Error|null) {
+        expect(data).toBe(null);
         done();
       }
       fs.exists(join(process.cwd(), "read", "to", "isDir", "read.json"), callback);
     });
     test("callback file exists() false", (done) => {
-      function callback(data: boolean) {
-        expect(data).toBe(false);
+      function callback(data:Error|null) {
+        expect(data instanceof Error).toBe(true);
         done();
       }
       fs.exists(join(process.cwd(), "read", "to", "isDir", "readNotExist.json"), callback);

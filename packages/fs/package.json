@@ -17,6 +17,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@tomato-js/shared": "^0.0.22"
+    "@tomato-js/shared": "^0.0.22",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/rimraf": "^3.0.0"
   }
 }

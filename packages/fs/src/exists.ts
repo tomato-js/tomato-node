@@ -3,7 +3,7 @@
  * @module @tomato-node/fs
  */
 import * as fs from "fs";
-import { FunctionType, isFunction } from "@tomato-js/shared";
+import { isFunction } from "@tomato-js/shared";
 /**
  * 判断文件或者目录是否存在
  *
@@ -13,8 +13,8 @@ import { FunctionType, isFunction } from "@tomato-js/shared";
  * ```
  *   import { exists } from '@tomato-node/fs';
  *   //callback style
- *   const callback=(isExist)=>{
- *     console.log(isExist?true:false)
+ *   const callback=(error)=>{
+ *     console.log(!error?true:false)
  *   };
  *   exists('file',callback);
  *   //promise style
@@ -23,11 +23,11 @@ import { FunctionType, isFunction } from "@tomato-js/shared";
  *   })()
  * ```
  */
-export function exists(filename: fs.PathLike, callback?: FunctionType<boolean,any>) {
+export function exists(filename: fs.PathLike, callback?: (error: Error|null) => void) {
   // callback
   if (isFunction(callback)) {
     return fs.stat(filename, (err) => {
-      callback(!err);
+      callback(err);
     });
   }
   // or promise
