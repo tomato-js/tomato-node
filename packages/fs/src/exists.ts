@@ -23,7 +23,7 @@ import { FunctionType, isFunction } from "@tomato-js/shared";
  *   })()
  * ```
  */
-export function exists(filename: string, callback?: FunctionType<any,any>) {
+export function exists(filename: fs.PathLike, callback?: FunctionType<boolean,any>) {
   // callback
   if (isFunction(callback)) {
     return fs.stat(filename, (err) => {
