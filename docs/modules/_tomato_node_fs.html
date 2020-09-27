@@ -79,6 +79,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#readjson" class="tsd-kind-icon">read<wbr>Json</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#readjsonsync" class="tsd-kind-icon">read<wbr>Json<wbr>Sync</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#requiremodule" class="tsd-kind-icon">require<wbr>Module</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#rimraf" class="tsd-kind-icon">rimraf</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#writejson" class="tsd-kind-icon">write<wbr>Json</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_tomato_node_fs.html#writejsonsync" class="tsd-kind-icon">write<wbr>Json<wbr>Sync</a></li>
 							</ul>
@@ -92,13 +93,13 @@
 					<a name="exists" class="tsd-anchor"></a>
 					<h3>exists</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">exists<span class="tsd-signature-symbol">(</span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">fs.PathLike</span>, callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">FunctionType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">exists<span class="tsd-signature-symbol">(</span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">fs.PathLike</span>, callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/e2a5d48/packages/fs/src/exists.ts#L26">fs/src/exists.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/exists.ts#L26">fs/src/exists.ts:26</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -109,8 +110,8 @@
 								<p>脚本举例</p>
 								<pre><code>  <span class="hljs-keyword">import</span> { exists } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/fs&#x27;</span>;
   <span class="hljs-comment">//callback style</span>
-  <span class="hljs-keyword">const</span> callback=<span class="hljs-function">(<span class="hljs-params">isExist</span>)=&gt;</span>{
-    <span class="hljs-built_in">console</span>.log(isExist?<span class="hljs-literal">true</span>:<span class="hljs-literal">false</span>)
+  <span class="hljs-keyword">const</span> callback=<span class="hljs-function">(<span class="hljs-params">error</span>)=&gt;</span>{
+    <span class="hljs-built_in">console</span>.log(!error?<span class="hljs-literal">true</span>:<span class="hljs-literal">false</span>)
   };
   exists(<span class="hljs-string">&#x27;file&#x27;</span>,callback);
   <span class="hljs-comment">//promise style</span>
@@ -124,7 +125,7 @@
 									<h5>filename: <span class="tsd-signature-type">fs.PathLike</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">FunctionType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -141,7 +142,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/e2a5d48/packages/fs/src/is.ts#L19">fs/src/is.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/is.ts#L19">fs/src/is.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -174,7 +175,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/e2a5d48/packages/fs/src/is.ts#L41">fs/src/is.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/is.ts#L41">fs/src/is.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -207,7 +208,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/e2a5d48/packages/fs/src/require-module.ts#L40">fs/src/require-module.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/require-module.ts#L40">fs/src/require-module.ts:40</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -234,13 +235,13 @@
 					<a name="mkdirp" class="tsd-anchor"></a>
 					<h3>mkdirP</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">mkdirP<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">fs.PathLike</span>, callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">FunctionType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">mkdirP<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">fs.PathLike</span>, callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in fs/src/mkdir-p.ts:30</li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/mkdir-p.ts#L30">fs/src/mkdir-p.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -256,8 +257,8 @@
     <span class="hljs-regexp">//</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">when</span> success
   })()
   //callback style
-  const callback=<span class="hljs-function"><span class="hljs-params">(isSuccess)</span>=&gt;</span>{
-    <span class="hljs-built_in">console</span>.log(isSuccess?true:<span class="hljs-literal">false</span>)
+  const callback=<span class="hljs-function"><span class="hljs-params">(error)</span>=&gt;</span>{
+    <span class="hljs-built_in">console</span>.log(!error?true:<span class="hljs-literal">false</span>)
   };
   mkdirP(path.join(process.cwd(),<span class="hljs-string">&#x27;/create/dir&#x27;</span>),callback);</code></pre>
 							</div>
@@ -270,7 +271,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">FunctionType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>回调函数，如果没有则走promise风格</p>
 									</div>
@@ -291,7 +292,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/e2a5d48/packages/fs/src/read-json.ts#L19">fs/src/read-json.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/read-json.ts#L19">fs/src/read-json.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -323,7 +324,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/e2a5d48/packages/fs/src/read-json.ts#L52">fs/src/read-json.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/read-json.ts#L52">fs/src/read-json.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -355,7 +356,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/e2a5d48/packages/fs/src/require-module.ts#L18">fs/src/require-module.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/require-module.ts#L18">fs/src/require-module.ts:18</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -378,6 +379,58 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="rimraf" class="tsd-anchor"></a>
+					<h3>rimraf</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">rimraf<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in fs/src/rimraf.ts:32</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>删除文件，基于通配符</p>
+								</div>
+								<p>新增于v0.0.7</p>
+								<p>脚本举例</p>
+								<pre><code>  <span class="hljs-keyword">import</span> { rimraf } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@tomato-node/fs&#x27;</span>
+  //promise style
+  <span class="hljs-keyword">async</span>(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+    <span class="hljs-keyword">await</span> rimraf(<span class="hljs-string">&#x27;./create/dir&#x27;</span>));
+    <span class="hljs-keyword">await</span> rimraf(<span class="hljs-string">&#x27;./*.json&#x27;</span>));
+    <span class="hljs-regexp">//</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">when</span> success
+  })()
+  //callback style
+  const callback=<span class="hljs-function"><span class="hljs-params">(error)</span>=&gt;</span>{
+    <span class="hljs-built_in">console</span>.log(!error?true:<span class="hljs-literal">false</span>)
+  };
+  rimraf(path.join(process.cwd(),<span class="hljs-string">&#x27;/create/dir&#x27;</span>),callback);</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>文件路径</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>回调函数，如果没有则走promise风格</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>是否删除成功</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="writejson" class="tsd-anchor"></a>
 					<h3>write<wbr>Json</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -387,7 +440,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/e2a5d48/packages/fs/src/write-json.ts#L20">fs/src/write-json.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/write-json.ts#L20">fs/src/write-json.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -423,7 +476,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/e2a5d48/packages/fs/src/write-json.ts#L39">fs/src/write-json.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/tomato-js/tomato-node/blob/d7e1dd0/packages/fs/src/write-json.ts#L39">fs/src/write-json.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -490,6 +543,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_tomato_node_fs.html#requiremodule" class="tsd-kind-icon">require<wbr>Module</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_tomato_node_fs.html#rimraf" class="tsd-kind-icon">rimraf</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_tomato_node_fs.html#writejson" class="tsd-kind-icon">write<wbr>Json</a>
