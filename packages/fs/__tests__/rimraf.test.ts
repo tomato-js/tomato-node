@@ -54,7 +54,7 @@ describe("fs util", () => {
       expect(isExists2).toBe(false);
     });
     test("promise path callback rimraf() true", (done) => {
-      async function callback(err: Error) {
+      async function callback(err: Error|null) {
         expect(err).toBe(null);
         const isExists = await fs.exists("./read/to");
         const isExists2 = await fs.exists("./read/to/isDir3");
@@ -65,7 +65,7 @@ describe("fs util", () => {
       fs.rimraf("./read/to/isDir3", callback);
     });
     test("promise path complex rimraf() true", (done) => {
-      async function callback(err: Error) {
+      async function callback(err: Error|null) {
         expect(err).toBe(null);
         const isExists = await fs.exists("./read/to/isDir4/read.js");
         const isExists2 = await fs.exists("./read/to/isDir4/read.json");
