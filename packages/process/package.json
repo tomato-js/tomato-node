@@ -1,0 +1,23 @@
+{
+  "name": "@tomato-node/process",
+  "version": "0.0.6",
+  "description": "simple, modular utils for node",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "npm run clean && run-p build:*",
+    "build:esm": "tsc -p tsconfig.json --target ESNext --module ESNext --outDir dist/esm",
+    "build:cjs": "tsc -p tsconfig.json --target ESNext --module commonjs --outDir dist/lib",
+    "clean": "rm -rf dist",
+    "test": "jest"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@tomato-js/shared": "^0.0.22",
+    "execa": "^4.0.3"
+  }
+}
