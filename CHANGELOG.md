@@ -1,3 +1,17 @@
+<a name="0.0.7"></a>
+## [0.0.7](https://github.com/tomato-js/tomato-node/compare/v0.0.6...v0.0.7) (2020-10-16)
+
+
+### Features
+
+* **fs:** exists ([07c96fe](https://github.com/tomato-js/tomato-node/commit/07c96fe))
+* **fs:** isDir isFile ([6ad2341](https://github.com/tomato-js/tomato-node/commit/6ad2341))
+* **fs:** mkdirP ([9a3e02b](https://github.com/tomato-js/tomato-node/commit/9a3e02b))
+* **fs:** rimraf ([781b209](https://github.com/tomato-js/tomato-node/commit/781b209))
+* **process:** use execa for chile_process ([fe896a2](https://github.com/tomato-js/tomato-node/commit/fe896a2))
+
+
+
 <a name="0.0.6"></a>
 ## [0.0.6](https://github.com/tomato-js/tomato-node/compare/v0.0.5...v0.0.6) (2020-08-24)
 
