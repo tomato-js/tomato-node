@@ -6,3 +6,4 @@ export { exists } from "./exists";
 export { mkdirP } from "./mkdir-p";
 export { rimraf } from "./rimraf";
 export { readFileByLines } from "./readline";
+export { appendFileByLines } from "./append-file-by-line";
